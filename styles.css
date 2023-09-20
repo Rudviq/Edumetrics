@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;  
+  }
+  
+  /* Style the top navigation bar */
+.topnav {
+    /* overflow: hidden; */
+    display: flex;
+    background: linear-gradient(to bottom,  #42adff,#0064b1);
+    /* background-color: #333; */
+    justify-content: space-between; 
+    /* height:70px;  */
+    position: -webkit-sticky;  
+    position: sticky;
+    top: 0; 
+  }
+
+    
+  /* Change color on hover */
+  .topnav a:hover {
+    color: black;
+  }
+  
+  /* Style the topnav links */
+  /* .topnav a { */
+    /* float: left;ss */
+    /* display: block; */
+    /* color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    max-height: 100px;
+  } */
+
+  .logo-container{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .logo {
+    height: 70px;
+    display: block;
+    float: left;
+    margin-left: 15px;
+    margin-right: 10px; 
+    
+}
+
+
+  .site-name {
+    color: #f2f2f2;
+    font-size: 25px; /* Adjust font size as needed */
+    align-items: center;
+    line-height: 50px;
+}
+
+/* Style the burger icon */
+.burger-icon {
+    font-size: 20px;
+    color: #f2f2f2;
+    text-decoration: none;
+    cursor: pointer;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 70px;
+    margin-right: 15px;
+}
+
+/* Change color on hover for the burger icon */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  right: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  line-height: 25px;
+  text-align: left;
+}
+
+
+.dropdown-content img{
+  height:25px;
+  /* padding: 12px 16px; */
+  line-height: 25px;
+  margin-right: 15px;
+}
+
+.dropdown {
+  display: inline-block;
+  align-items: center;
+}
+
+.dropdown:hover{
+  background-color: #ddd;
+}
+
+.dropdown-content a:hover {background-color: #0091ff;}
+
+
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 500px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  .footer {
+    /* background-color: #f1f1f1; */
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    display:flex;
+    flex-wrap: wrap;
+    background: #0064b1; /* Light gray or off-white color */
+    color: #f5f5f5; /* Text color for contrast */
+    justify-content: space-around;
+  }
+
+  .uta_logo{
+    float: left;
+    display: block;
+    left: 0;
+    /* max-width: 200px; */
+    height:auto;
+  }
+
+  .uni_info{
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+    float: left;
+    text-align: left;
+    
+  }
+
+  .uni_info p, h3{ padding: 0; margin: 0;}
+
+  .contact-us {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: flex-end space-evenly;
+    bottom: 0;
+}
+
+  .contact-us img{
+    max-height: 30px;
+    margin-right: 20px; 
+    justify-content: space-evely;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .topnav .dropdown, 
+    .topnav div ,.topnav .logo-container {float:none;}
+
+    .topnav {
+      display: flex; /* Reset display property */
+      flex-direction: column; /* Change direction to column */
+      align-items: center; /* Center content horizontally */
+      margin-left: 0;
+      width: 100%;
+    }
+
+    /* Move the burger button below the logo container */
+    .burger-icon {
+        display: block;
+        margin: 10px auto; /* Adjust margin as needed for vertical alignment */
+        line-height: normal; /* Reset line-height to default */
+    }
+
+    .dropdown-content{
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+
+    .dropdown-content a{
+      text-align: center;
+    } 
+
+    /* .footer {
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+
+    .contact-us {
+        display: flex; 
+        align-items: center;
+        justify-content: flex-start; 
+    }
+
+    .uni_info, .contact-us {
+      width: 100%; 
+      order: 2; 
+    }  */
+
+    /* Style the footer */
+    .footer {
+      padding: 10px;
+      text-align: center;
+      bottom: 0;
+      display: flex;
+      background: #0064b1;
+      color: #f5f5f5;
+      flex-wrap: wrap; /* Wrap content to the next line if needed */
+      justify-content: space-between; /* Space between items */
+    }
+
+    .uta_logo {
+      flex: 1; /* Takes 1/3 of the available space */
+      order: 1; /* Display first on the left */
+      max-width: 100%;
+      height: auto;
+    }
+
+    .uni_info {
+      flex: 1; /* Takes 1/3 of the available space */
+      text-align: left;
+      padding-left: 20px;
+      order: 2; /* Display second on the right */
+    }
+
+    .uni_info h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .uni_info p {
+      margin: 5px 0;
+    }
+
+    .contact-us {
+      flex: 1; /* Takes 1/3 of the available space */
+      align-items: center;
+      justify-content: space-evenly;
+      order: 3; /* Display third on the right */
+    }
+
+    .contact-us img {
+      max-height: 20px;
+      margin-right: 10px;
+    }
+
+  }
